@@ -1,0 +1,39 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            
+            <h2> Orders List</h2>
+            <hr>
+            <table class = "table table-striped">
+                <thead>
+                    <tr>
+                        <th> Order Tracking Number </th>
+                        <th> Total Price</th>
+                        <th> Total Quantity</th>
+                        <th> Status </th>
+                        <th> Date Created </th>
+                        <th> Date Updated </th>
+                        <th> Actions </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor = "let order of orders" >
+                        <td> {{ order.orderTrackingNumber }} </td>
+                        <td> {{ order.totalPrice }} </td>
+                        <td> {{ order.totalQuantity }} </td>
+                        <td> {{ order.status }} </td>
+                        <td> {{ order.dateCreated }} </td>
+                        <td> {{ order.lastUpdated }} </td>
+                        <td>
+                            <button  class = "btn btn-info"> Update</button>
+                            <button  class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                            <button  class = "btn btn-info" style="margin-left: 10px"> View</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            
+            <h2> Products List</h2>
+            <hr>
+            <table class = "table table-striped">
+                <thead>
+                    <tr>
+                        <th> Name </th>
+                        <th> Description </th>
+                        <th> Unit Price</th>
+                        <th> Units in Stock </th>
+                        <th> Date Created </th>
+                        <th> Category Id </th>
+                        <th> Action </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor = "let product of products" >
+                        <td> {{ product.name }} </td>
+                        <td> {{ product.description }} </td>
+                        <td> {{ product.unitPrice }} </td>
+                        <td> {{ product.unitsInStock }} </td>
+                        <td> {{ product.dateCreated }} </td>
+                        <td> {{ product.categoryId }} </td>
+                        <td>
+                            <button  class = "btn btn-info" style="margin-left: 10px"> View</button>
+                            <hr>
+                            <button  class = "btn btn-info" style="margin-left: 10px"> Categorize</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<div class="login-status-header">
+
+    <!-- <div *ngIf=" user.authStatus=='AUTH' && user.name" class="login-status-user-info">
+        Welcome back {{ user.name }}
+    </div> -->
+
+    <button *ngIf="user.authStatus!='AUTH'" routerLinkActive="active" (click)="login()" class="security-btn">Login</button>
+    <button *ngIf="user.authStatus=='AUTH'" routerLinkActive="active" (click)="logout()" class="security-btn">Logout</button>
+    <button *ngIf="user.authStatus=='AUTH'" routerLinkActive="active" routerLink="/admin" class="security-btn">Admin Controls</button>
+
+</div>
